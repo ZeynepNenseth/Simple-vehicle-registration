@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MotorvognOppgave1</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Motorvognregister</h1>
+        <table class="table table-striped">
+            <div id="vehicleList"></div>
+        </table>
+
+        <a class="btn btn-primary" href="registrere.html">Registrer ny motorvogn</a> <!--sender deg til ny side-->
+        <a class="btn btn-danger" onclick="slettAlleMotorvogn()">Slett alle Motorvogn</a><!-- ikke en button, hvorfor ikke?-->
+        <button class="btn btn-warning" onclick="logout()">Logg ut</button>
+        <br/>
+        <div id="feil" style="color: red"></div>
+    </div>
+</body>
+</html>

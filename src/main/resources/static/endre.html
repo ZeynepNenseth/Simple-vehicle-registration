@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EndreMotorvogn</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <script src="endre.js"></script>
+    <script src="validere.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Endre Motorvogn</h1>
+        <form class="form">
+            <div class="form-group">
+                <label for="id" style="display: none">Id</label>
+                <input type="hidden" class="form-control" id="id"/>
+            </div>
+            <div class="form-group">
+                <label for="personnr">Personnr</label>
+                <input type="text" class="form-control" id="personnr" onchange="validerPersonnr(this.value)"/>
+                <span id="wrongPId" style="color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="navn">Navn</label>
+                <input type="text" class="form-control" id="navn" onchange="validerNavn(this.value)"/>
+                <span id="wrongName" style="color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="adresse">Adresse</label>
+                <input type="text" class="form-control" id="adresse" onchange="validerAdresse(this.value)"/>
+                <span id="wrongAddress" style="color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="kjennetegn">Kjennetegn</label>
+                <input type="text" class="form-control" id="kjennetegn" onchange="validerKjennetegn(this.value)"/>
+                <span id="wrongLicence" style="color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="merke">Merke</label>
+                <input type="text" class="form-control" id="merke"/>
+            </div>
+            <div class="form-group">
+                <label for="modell">Modell</label>
+                <input type="text" class="form-control" id="modell"/>
+            </div>
+        </form>
+        <button class="btn btn-primary" onclick="validerOgEndreMotorvogn()">Endre Motorvogn</button>
+        <br/>
+        <div id="feil" style="color: red"></div>
+    </div>
+</body>
+</html>

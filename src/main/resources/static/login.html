@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <script src="login.js"></script>
+    <script src="validere.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Logg inn</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="brukernavn">Brukernavn</label>
+                    <input type="text" class="form-control" id="brukernavn" onchange="validerBrukernavn(this.value)"/>
+                    <span id="wrongUsername" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="passord">Passord</label>
+                    <input type="password" class="form-control" id="passord" onchange="validerPassord(this.value)"/>
+                    <span id="wrongPassword" style="color: red"></span>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="validerOgLogin()">Logg inn</button>
+            <button class="btn btn-success" onclick="krypterPassord()">Krypter passord</button>
+            <br/>
+            <div id="feil" style="color: red"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
